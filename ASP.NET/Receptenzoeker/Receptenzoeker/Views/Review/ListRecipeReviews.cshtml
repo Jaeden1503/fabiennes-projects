@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Receptenzoeker.Models.ReviewViewModel>
+
+@{
+    ViewData["Title"] = "ListRecipeReviews";
+}
+
+<div class="dashboardlist">
+    <h2 class="greenbold">Alle reviews van gekozen recept</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UserViewModel.UserName)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td style="word-break: break-all">
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserViewModel.UserName)
+                    </td>
+                    <td>
+                        <a class="text-dark" asp-area="" asp-controller="Review" asp-action="DeleteReview" asp-route-id="@item.ID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

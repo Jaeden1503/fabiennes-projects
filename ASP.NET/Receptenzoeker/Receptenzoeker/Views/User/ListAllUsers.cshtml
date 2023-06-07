@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Receptenzoeker.Models.UserViewModel>
+
+@{
+    ViewData["Title"] = "ListAllUsers";
+}
+
+<div class="dashboardlist">
+    <h2 class="greenbold">Alle gebruikers</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UserName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsActive)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserName)
+                    </td>
+                    <td>
+                        @if (item.IsActive)
+                        {
+                            <p>Actief</p>
+                        }
+                        else
+                        {
+                            <p>Inactief</p>
+                        }
+                    </td>
+                    <td>
+                        <a class="text-dark" asp-area="" asp-controller="User" asp-action="ChangeUserStatus" asp-route-id="@item.ID" asp-route-isactive="@item.IsActive"> Verander status</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

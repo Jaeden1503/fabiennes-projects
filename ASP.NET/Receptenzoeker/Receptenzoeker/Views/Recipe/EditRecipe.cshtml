@@ -1,0 +1,187 @@
+﻿@using Newtonsoft.Json
+
+@model Receptenzoeker.Models.RecipeViewModel
+
+<link href="~/css/site.css" rel="stylesheet" id="bootstrap-css">
+
+@{
+    ViewData["Title"] = "EditRecipe";
+}
+
+<div class="dashboardlist">
+    <h2 class="greenbold">Hier kan het recept aangepast worden</h2>
+
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="EditRecipe">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="ID" class="control-label"></label>
+                    <input asp-for="ID" class="form-control" disabled />
+                    <span asp-validation-for="ID" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Category" class="control-label"></label>
+                    <select class="form-select" aria-label="Default select example" asp-for="@Model.Category" required>
+                        <option selected hidden>@Model.Category</option>
+                        <option value="Voorgerecht">Voorgerecht</option>
+                        <option value="Hoofdgerecht">Hoofdgerecht</option>
+                        <option value="Nagerecht">Nagerecht</option>
+                    </select>
+                    <span asp-validation-for="Category" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PreparationTime" class="control-label"></label>
+                    <input asp-for="PreparationTime" class="form-control" />
+                    <span asp-validation-for="PreparationTime" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PreparationMethod" class="control-label"></label>
+                    <textarea asp-for="PreparationMethod" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="PreparationMethod" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PersonAmount" class="control-label"></label>
+                    <input asp-for="PersonAmount" class="form-control" />
+                    <span asp-validation-for="PersonAmount" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Type" class="control-label"></label>
+                    <select class="form-select" aria-label="Default select example" asp-for="@Model.Type" required>
+                        <option selected hidden>@Model.Type</option>
+                        <option value="Vegetarisch">Vegetarisch</option>
+                        <option value="Vlees">Vlees</option>
+                    </select>
+                    <span asp-validation-for="Type" class="text-danger"></span>
+                </div>
+
+                <input type="hidden" name="RecipeIngredient" id="hidden" value="" />
+
+                <div class="form-group">
+                    <table id="tblCustomers" class="table" cellpadding="0" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th style="width:150px">Hoeveelheid</th>
+                                <th style="width:150px">Eenheid</th>
+                                <th style="width:150px">Ingredient</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot id="item-list">
+                            <tr>
+                                @*hier moet die foreach ingredient in detailslist appenden*@
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Aanpassen" class="btn purplebutton" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+</div>
+
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+    </script>
+}
+
+@section Scripts {
+
+    <script>
+        stringa = "@JsonConvert.SerializeObject(Model.IngredientViewModels)"
+        removeqout = stringa.replace(/&quot;/g, '"')
+        dropdown = JSON.parse(removeqout)
+
+        //"define" JSON object / list
+        const a = { "RecipeIngredientVMs": [] }
+
+        //an element in 'list'
+        recipe = {
+            "Quantity": null,
+            "QuantityUnit": null,
+            IngredientVM: {
+                IngredientName: null
+            }
+        }
+
+        var index = 0;
+        buttonclick = function (olditems) {
+
+            var n = '<tr> <td><input type="text" class="items" oninput="updatequantity(' + index + ')" id="q-' + index + '" value="' + olditems.Quantity + '" required/></td>' +
+                '<td><input type="text" class="items" oninput="updatequantityunit(' + index + ')" id="qu-' + index + '" value="' + olditems.QuantityUnit + '" required /></td>' +
+                '<td><select class="items" onchange="updatename(' + index + ')" id="name-' + index + '" ><option selected hidden value="' + olditems.IngredientVM.ID + ' "> ' + olditems.IngredientVM.IngredientName + ' </option></select></td></tr>'
+
+
+            $("#item-list").append(n);          
+            $.each(dropdown, function (i, p) {
+                $('#name-'+index).append($('<option></option>').val(p.ID).html(p.IngredientName));
+            });
+
+            // Verander de recipe variable van json naar string naar json zodat het niet refereerd naar het object maar een nieuwe kopie maakt
+            a.RecipeIngredientVMs[index] = JSON.parse(JSON.stringify(recipe))
+            index++
+        }
+
+        updatequantity = function (i) {
+            console.log($("#q-" + i).val())
+            console.log(i)
+            a.RecipeIngredientVMs[i]["Quantity"] = $("#q-" + i).val()
+            console.log(a.RecipeIngredientVMs)
+
+            //this hidden object consists of all the data from the textboxes
+            $("#hidden").val(JSON.stringify(a))
+        }
+
+        //oninput function where, it constantly updates on input changes
+        updatequantityunit = function (i) {
+            a.RecipeIngredientVMs[i]["QuantityUnit"] = $("#qu-" + i).val()
+            $("#hidden").val(JSON.stringify(a))
+        }
+
+        updatename = function (i) {
+            a.RecipeIngredientVMs[i].IngredientVM["IngredientName"] = $("#name-" + i+" option:selected").text()
+            a.RecipeIngredientVMs[i].IngredientVM["ID"] = $("#name-" + i).val()
+            $("#hidden").val(JSON.stringify(a))
+        }
+
+        stringb = "@JsonConvert.SerializeObject(Model.RecipeIngredientVMs)"
+        removecharacters = stringb.replace(/&quot;/g, '"')
+        oldingredients = JSON.parse(removecharacters)
+
+
+        //execute for every previously/old existing ingredient
+        for (var i = 0; i < oldingredients.length; i++)
+        {
+            buttonclick(oldingredients[i]);
+            a.RecipeIngredientVMs[i] = JSON.parse(JSON.stringify(recipe))
+
+            a.RecipeIngredientVMs[i]["Quantity"] = $("#q-" + i).val()
+            a.RecipeIngredientVMs[i]["QuantityUnit"] = $("#qu-" + i).val()
+            a.RecipeIngredientVMs[i].IngredientVM["IngredientName"] = $("#name-" + i + " option:selected").text()
+            a.RecipeIngredientVMs[i].IngredientVM["ID"] = $("#name-" + i).val()
+
+            $("#hidden").val(JSON.stringify(a))
+        }
+    </script>
+}
+
+
+

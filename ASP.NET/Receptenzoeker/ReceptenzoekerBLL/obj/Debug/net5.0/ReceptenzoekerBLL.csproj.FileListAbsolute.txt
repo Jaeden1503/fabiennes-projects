@@ -1,0 +1,15 @@
+C:\Users\fabie\Documents\Tilburg HBO-ICT\Semester 2\Individueel project webapp\s2-individueel-project-webapp\Receptenzoeker\ReceptenzoekerBLL\bin\Debug\net5.0\ReceptenzoekerBLL.deps.json
+C:\Users\fabie\Documents\Tilburg HBO-ICT\Semester 2\Individueel project webapp\s2-individueel-project-webapp\Receptenzoeker\ReceptenzoekerBLL\bin\Debug\net5.0\ReceptenzoekerBLL.dll
+C:\Users\fabie\Documents\Tilburg HBO-ICT\Semester 2\Individueel project webapp\s2-individueel-project-webapp\Receptenzoeker\ReceptenzoekerBLL\bin\Debug\net5.0\ref\ReceptenzoekerBLL.dll
+C:\Users\fabie\Documents\Tilburg HBO-ICT\Semester 2\Individueel project webapp\s2-individueel-project-webapp\Receptenzoeker\ReceptenzoekerBLL\bin\Debug\net5.0\ReceptenzoekerBLL.pdb
+C:\Users\fabie\Documents\Tilburg HBO-ICT\Semester 2\Individueel project webapp\s2-individueel-project-webapp\Receptenzoeker\ReceptenzoekerBLL\bin\Debug\net5.0\ReceptenzoekerDAL.dll
+C:\Users\fabie\Documents\Tilburg HBO-ICT\Semester 2\Individueel project webapp\s2-individueel-project-webapp\Receptenzoeker\ReceptenzoekerBLL\bin\Debug\net5.0\ReceptenzoekerDAL.pdb
+C:\Users\fabie\Documents\Tilburg HBO-ICT\Semester 2\Individueel project webapp\s2-individueel-project-webapp\Receptenzoeker\ReceptenzoekerBLL\obj\Debug\net5.0\ReceptenzoekerBLL.csproj.AssemblyReference.cache
+C:\Users\fabie\Documents\Tilburg HBO-ICT\Semester 2\Individueel project webapp\s2-individueel-project-webapp\Receptenzoeker\ReceptenzoekerBLL\obj\Debug\net5.0\ReceptenzoekerBLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fabie\Documents\Tilburg HBO-ICT\Semester 2\Individueel project webapp\s2-individueel-project-webapp\Receptenzoeker\ReceptenzoekerBLL\obj\Debug\net5.0\ReceptenzoekerBLL.AssemblyInfoInputs.cache
+C:\Users\fabie\Documents\Tilburg HBO-ICT\Semester 2\Individueel project webapp\s2-individueel-project-webapp\Receptenzoeker\ReceptenzoekerBLL\obj\Debug\net5.0\ReceptenzoekerBLL.AssemblyInfo.cs
+C:\Users\fabie\Documents\Tilburg HBO-ICT\Semester 2\Individueel project webapp\s2-individueel-project-webapp\Receptenzoeker\ReceptenzoekerBLL\obj\Debug\net5.0\ReceptenzoekerBLL.csproj.CoreCompileInputs.cache
+C:\Users\fabie\Documents\Tilburg HBO-ICT\Semester 2\Individueel project webapp\s2-individueel-project-webapp\Receptenzoeker\ReceptenzoekerBLL\obj\Debug\net5.0\ReceptenzoekerBLL.csproj.CopyComplete
+C:\Users\fabie\Documents\Tilburg HBO-ICT\Semester 2\Individueel project webapp\s2-individueel-project-webapp\Receptenzoeker\ReceptenzoekerBLL\obj\Debug\net5.0\ReceptenzoekerBLL.dll
+C:\Users\fabie\Documents\Tilburg HBO-ICT\Semester 2\Individueel project webapp\s2-individueel-project-webapp\Receptenzoeker\ReceptenzoekerBLL\obj\Debug\net5.0\ref\ReceptenzoekerBLL.dll
+C:\Users\fabie\Documents\Tilburg HBO-ICT\Semester 2\Individueel project webapp\s2-individueel-project-webapp\Receptenzoeker\ReceptenzoekerBLL\obj\Debug\net5.0\ReceptenzoekerBLL.pdb

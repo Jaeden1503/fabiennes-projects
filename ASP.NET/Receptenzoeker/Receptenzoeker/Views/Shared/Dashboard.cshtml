@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link href="~/css/dashboard.css" rel="stylesheet" id="bootstrap-css">
+    @*<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>*@
+    <!------ Include the above in your HEAD tag ---------->
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-1/css/all.min.css" />
+    @*bootstrap link, thank you https://bootsnipp.com/snippets/1KA79#comments*@
+    @using Microsoft.AspNetCore.Http
+
+</head>
+<body class="home">
+    <div class="container-fluid display-table">
+        <div class="row display-table-row">
+            <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation" style="height: 100vh">
+                <div class="logo" style="font-size: 62px; color: white">
+                    <a hef="home.html">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <h1>@Context.Session.GetString("Admin")</h1>
+                    </a>
+                </div>
+                <div class="navi">
+                    <ul>
+                        <li class="active"><a href="@Url.Action("Index", "Dashboard")"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Home</span></a></li>
+                        <li><a href="@Url.Action("ListAllRecipes", "Recipe")"><i class="fa fa-book" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Recepten</span></a></li>
+                        <li><a href="@Url.Action("ListAllIngredients", "Ingredient")"><i class="fas fa-carrot" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Ingrediënten</span></a></li>
+                        <li><a href="@Url.Action("ListAllUsers", "User")"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Gebruikers</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-10 col-sm-11 display-table-cell v-align">
+                <!--<button type="button" class="slide-toggle">Slide Toggle</button> -->
+                <div class="row">
+                    <header>
+                        <div class="col-md-12">
+                            <div class="header-rightside">
+                                <ul class="list-inline header-top pull-right">
+                                    <li><a href="#"></a></li>
+
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-user fa-10x" aria-hidden="true"></i>
+                                            <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <div class="navbar-content">
+                                                    <span>@Context.Session.GetString("Admin")</span>
+                                                    @*<p class="text-muted small">admin@admin.nl</p>*@
+                                                    <div class="divider">
+                                                    </div>
+                                                    <a href="@Url.Action("Logout", "User")" class="view btn-sm active">Uitloggen</a> @*Voor uitloggen*@
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+                <div>
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - Receptenzoeker - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>
