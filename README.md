@@ -1,4 +1,4 @@
-# fabiennes-projects
+# Personal projects that I made during studies
 In this repository, you'll learn about me, my projects and my work ethics.
 
 ## About me:
@@ -8,3 +8,16 @@ I consider myself a full-stack developer, where the software is as important as 
 I'm born and raised in the Netherlands, so Dutch is my first language, but I also speak English fluently and have basic knowledge of German. I'm very dedicated to the things a make. I work hard to keep improving my skills. I can also work well in a group, but working individually is also not a problem.
 
 As an ICT & Software student, I've had the opportunity to work with multiple programming languages, such as C#, Java, Javascript, Swift and Kotlin (and HTML and CSS, but they are considered mark-up and styling languages). But I'm very adaptable to learning a new language!
+
+
+## My work ethics step-by-step:
+### Planning - agile (scrum)
+Even when working alone I work with an agile (scrum) flow. Planning per sprint what features and task I need to perform. I have experience in using Azure DevOps and JIRA.
+
+![JIRA logo]()
+![DevOps logo]()
+
+
+### Sketching
+### Designing
+### Building
