@@ -12,7 +12,7 @@ Hi my name is fabiënne Leidekker. I'm currently studying ICT & Software at Font
 
 I'm born and raised in the Netherlands, so Dutch is my first language, but I also speak English fluently and have a basic knowledge of German. I'm very dedicated to the things a make. I work hard to keep improving my skills. I can also work well in a group, but working individually is also not a problem.
 
-As an ICT & Software student, I've had the opportunity to work with multiple programming languages, such as C#, Java, Javascript, Swift and Kotlin (and HTML and CSS, but they are considered mark-up and styling languages). But I'm very adaptable to learning a new language!
+As an ICT & Software student, I've had the opportunity to work with multiple programming languages, such as C#, Java, Javascript (React), Swift and Kotlin (Jetpack Compose) (and HTML and CSS, but they are considered mark-up and styling languages). But I'm very adaptable to learning a new language!
 
 
 ## My work ethics step-by-step:
@@ -21,9 +21,11 @@ Even when working alone, I work with an agile (scrum) flow. Planning per sprint 
 <img src="images/jira-logo.png" alt="jira logo" style="height: 110px; margin-right: 10px">
 <img src="images/azure-logo.png" alt="azure devops logo" style="width: 200px; height: 150px">
 
-### Sketching
-I start of 
+### Sketching - Designing - Improving
+When I want to build something on the front-end, I start of by making very simple sketches on figma or paint. Then I make a second version that gives me a more concrete visual. If I like to look of it, I start implementing it on the front-end.   
+<img src="images/S2-individual.png" alt="jira logo" style="height: 160px; margin-right: 10px">
+<img src="images/S2-individual-v2.png" alt="jira logo" style="height: 160px; margin-right: 10px">
+<img src="images/S2-individual-v3.png" alt="jira logo" style="height: 160px; margin-right: 10px">
 
-### Designing
+
 ### Building
-### Improving
