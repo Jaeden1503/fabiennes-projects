@@ -32,7 +32,7 @@ When I want to build something on the front-end, I start of by making very simpl
 
 ### Building
 I've worked with a couple different tech stacks, such as ASP.NET in combination with Microsoft SQL server and Java Springboot with MySQL and React.
-Some project I've worked on: 
+Some project I've worked on (also see code or demos in this repository): 
 - S1: (group) A simple platformer (Unity)
 - S2: (individual) A recipe finder web app (ASP.net)
 - S2: (group) A vecozo code compiler web app (ASP.net)
