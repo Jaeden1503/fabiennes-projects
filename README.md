@@ -23,9 +23,12 @@ Even when working alone, I work with an agile (scrum) flow. Planning per sprint 
 
 ### Sketching - Improving - Implementation
 When I want to build something on the front-end, I start of by making very simple sketches on figma or paint. Then I make a second version that gives me a more concrete visual. If I like to look of it, I start implementing it on the front-end.   
-<img src="images/S2-individual.png" alt="jira logo" style="height: 160px; margin-right: 10px">
-<img src="images/S2-individual-v2.png" alt="jira logo" style="height: 160px; margin-right: 10px">
-<img src="images/S2-individual-v3.png" alt="jira logo" style="height: 160px; margin-right: 10px">
+<img src="images/S2-individual.png" alt="version 1" style="height: 160px; margin-right: 10px">
+<img src="images/S2-individual-v2.png" alt="version 2" style="height: 160px; margin-right: 10px">
+<img src="images/S2-individual-v3.png" alt="version 3" style="height: 160px; margin-right: 10px">
+
+<img src="images/S2-group.jpg" alt="version 1" style="height: 160px; margin-right: 10px">
+<img src="images/S2-group-v2.jpg" alt="version 2" style="height: 160px; margin-right: 10px">
 
 ### Building
 I've worked with a couple different tech stacks, such as ASP.NET in combination with Microsoft SQL server and Java Springboot with MySQL and React.
