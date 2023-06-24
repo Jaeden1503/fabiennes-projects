@@ -1,0 +1,81 @@
+﻿/*
+    color codes:
+    light-blue : #d8e8f8
+    orange: #D18F00
+    blue: #3E8EDE
+    darker-blue: #005cb9
+*/
+
+
+#editor {
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 30%;
+    right: 0;
+    width: 70%;
+    height: 66.7%;
+}
+
+#challenge {
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 30%;
+    height: 66.7%;
+    z-index: 0;
+    background-color: #d8e8f8;
+    color: #005cb9;
+}
+
+#errorlog {
+    position: absolute;
+    top: 75%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: none;
+    outline: none;
+    padding: 15px;
+    width: 85%;
+    height: 25%;
+    z-index: 1;
+    resize: none;
+}
+
+.gamebuttons {
+    margin-left: 40px;
+    margin-top: 50px;
+    width: 10em;
+    height: 2em;
+    color: #D18F00;
+    border-color: #D18F00;
+}
+
+.gamebuttons:hover {
+    color: white;
+    background-color: #D18F00;    
+}
+
+#run {
+    position: absolute;
+    top: 75%;
+    bottom: 0;
+    left: 85%;
+    right: 0;
+}
+
+#submit {
+    position: absolute;
+    top: 80%;
+    bottom: 0;
+    left: 85%;
+    right: 0;
+    margin-top: 60px;
+}
+
+#hint {
+    display: none;
+}

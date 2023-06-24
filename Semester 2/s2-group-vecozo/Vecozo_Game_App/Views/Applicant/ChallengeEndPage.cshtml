@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Result Page";
+}
+@model ApplicantViewModel
+
+
+<div class="text-center rcornersblue" style="background-color: #3E8EDE">
+    <h1 style="color: #ffffff"><strong>Bedankt @Model.Name</strong></h1>
+    <p style="color: #ffffff">
+        voor het solliciteren bij Vecozo! Je zult zo spoedig mogelijk van ons terug horen. In de tussentijd, kun je hier je resultaten bekijken van de gemaakte challenge.
+    </p>
+</div>
+
+<div class="text-center rcornerslightblueonresult">
+    @if (Model.Validation) {<h1 style="color: #005cb9"><strong>Goed gedaan!</strong></h1> }
+    else { <h1 style="color: #005cb9"><strong>Volgende keer beter!</strong></h1>}
+    <p style="margin:5px"><strong>Solliciteergegevens:</strong></p>
+    <p><strong>Naam: </strong>@Model.Name</p>
+    <p><strong>Email: </strong>@Model.Email</p>
+    <p><strong>Gegeven Antwoord: </strong>@Model.GivenAnswer</p>
+    @if (!Model.Validation) {<p><strong>Correcte antwoord: </strong>@Model.Answer</p>}
+    <a style="color: #D18F00" asp-action="Index" asp-controller="Home"><strong>Ga terug naar de hoofdpagina!</strong></a>
+</div>

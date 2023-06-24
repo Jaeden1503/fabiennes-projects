@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model ApplicantViewModel
+
+<head>
+    <link rel="stylesheet" href="~/css/Applicant.css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Login Form --> 
+        <form asp-controller="Applicant">
+            <input asp-for="@Model.Name" placeholder="Name" value="">
+            <input asp-for="@Model.Email" placeholder="Email" value="">
+            <input asp-action="AddApplicant" type="submit" class="fadeIn fourth">
+        </form>
+    </div>
+</div>

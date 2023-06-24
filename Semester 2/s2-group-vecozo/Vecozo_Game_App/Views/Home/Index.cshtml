@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model ChallengeListViewModel
+
+
+<div class="text-center rcornersblue" style="background-color: #3E8EDE">
+    <h1 style="color: #ffffff"><strong>Welkom sollicitant</strong></h1>
+    <p style="color: #ffffff">
+        Wellicht wordt jij een toekomstige werknemer bij VECOZO. Op deze pagina kun je je programmeerkennis testen door
+        middel van een coding challenge te maken.
+    </p>
+</div>
+
+@foreach (ChallengeViewModel item in Model.ChallengeViewModels)
+{
+    <div class="text-center rcornerslightblue col-md-4">
+        <h2 style="color: #005cb9"><strong>@item.Name</strong></h2>
+        <p><strong>Skillniveau: </strong> @item.Skilllvl</p>
+        <p ><strong>Beschikbaar tot: </strong> @item.TimeAvailable</p>
+        <p><strong>Beschrijving: </strong> @item.Description</p>
+        <a class="lowbutton" asp-action="Index" asp-controller="Game" asp-route-id="@item.ID"><strong>Speel de game!</strong></a>
+    </div>
+}
