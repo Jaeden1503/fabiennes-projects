@@ -1,0 +1,68 @@
+/*///////// start css for the background boxes ///////// */
+
+.left_top {
+    position: absolute;
+    width: 330px;
+    height: 300px;
+    left: -3.75rem;
+    top: -0.625rem;
+    z-index: -1;
+
+    background: linear-gradient(127.23deg, #1D0C58 4.15%, #5C0A95 48.65%, #7107AA 73.62%);
+    border-radius: 50px;
+    transform: rotate(-25deg);
+}
+
+.middle_top {
+    position: absolute;
+    width: 750px;
+    height: 450px;
+    left: 430px;
+    top: -200px;
+    z-index: -1;
+
+    background: linear-gradient(123.98deg, #DD4085 28.27%, #7107AA 93.67%);
+    border-radius: 50px;
+    transform: rotate(-25deg);
+}
+
+.left_bottom {
+    position: absolute;
+    width: 420px;
+    height: 600px;
+    left: -1.25rem;
+    top: 26.25rem;
+    z-index: -1;
+
+    background: linear-gradient(145.53deg, #DD4085 9.52%, #AF32AC 52.24%, #5C0A95 79.82%);
+    border-radius: 50px;
+    transform: rotate(-25deg);
+}
+
+.middle_center {
+    position: absolute;
+    width: 280px;
+    height: 270px;
+    left: 480px;
+    top: 425px;
+    z-index: -1;
+
+    background: linear-gradient(145.53deg, #DD4085 9.52%, #AF32AC 52.24%, #5C0A95 79.82%);
+    border-radius: 50px;
+    transform: rotate(-25deg);
+}
+
+.right_bottom {
+    position: absolute;
+    width: 700px;
+    height: 590px;
+    left: 900px;
+    top: 200px;
+    z-index: -1;
+
+    background: linear-gradient(127.23deg, #7107AA 4.15%, #5C0A95 32.45%, #1D0C58 69.27%);
+    border-radius: 50px;
+    transform: rotate(-25deg);
+}
+
+/*///////// end css for the background boxes ///////// */

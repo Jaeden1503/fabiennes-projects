@@ -1,0 +1,9 @@
+.navbar {
+    background-color: #261546;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 9999;
+}
+
+.navbar-spacing {
+    margin-left: 10px;
+}

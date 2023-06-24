@@ -1,0 +1,115 @@
+.question-body {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 6rem;
+    margin-top: 2rem;
+}
+
+.chat-create {
+    border-radius: 10px;
+    border-color: #62587B;
+    width: 30rem;
+    height: 2.5rem;
+    padding-left: 15px;
+
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.chat-create-button {
+    border-radius: 10px;
+    border: none;
+    background-color: #D63F8B;
+    height: 2.5rem;
+
+    padding: 6px 16px;
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+/* //////////////////// */
+
+
+.chat-search {
+    position: relative;
+    width: 38rem;
+    height: 3.2rem;
+    border-radius: 50px;
+    background-color: #F3F3F3;
+    margin: 1rem auto 3.5rem auto;
+    padding: 9px 30px 0px 30px;
+    cursor: pointer;
+}
+
+#chat-input::placeholder {
+    color: #9F9C9C;
+}
+
+.chat-searchText {
+    text-align: left;
+    margin-right: 100px;
+    font-size: 21px;
+    margin-left: 0;
+    border: none;
+    outline: none;
+
+    background-color: #F3F3F3;
+    color: #62587B;
+
+    display: flex;
+    align-items: center;
+    width: 34rem;
+}
+
+
+/* ///////////////////// */
+
+.chat-item {
+    width: 46rem;
+    background-color: #3B2D5C;
+    height: 90px;
+    border-radius: 20px;
+    color: white;
+
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    padding: 15px 26px;
+    /* display: grid; */
+    grid-template-columns: 24rem 12rem auto;
+
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.chat-title {
+    font-size: 20px;
+    padding-right: 20px;
+    max-width: 27rem;
+    width: 27rem;
+}
+
+.chat-names {
+    font-size: 16px;
+    padding-right: 20px;
+    min-width: 13rem;
+    width: 13rem;
+}
+
+.join-icon {
+    float: right;
+    align-content: flex-end;
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+    background-color: #62587B;
+    border-radius: 10px;
+    padding: 4px 10px;
+    /* margin-left: 34px; */
+    cursor: pointer;
+}

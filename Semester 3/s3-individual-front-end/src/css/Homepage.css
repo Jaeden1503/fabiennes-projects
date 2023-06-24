@@ -1,0 +1,56 @@
+.overflow-hidden {
+    overflow: hidden;
+ }
+
+.img_band {
+    width: 550px;
+    height: 550px;
+    margin-top: 20px;;
+    margin-left: 50px;;
+    transform: rotate(20deg);
+}
+
+.title {
+    /* size: 72px; */
+    font-size: 66px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: #261546;
+    
+    position: fixed;
+    margin-top: 4rem;
+    margin-left: 20px;
+}
+
+.subtitle {
+    font-size: 28px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    color: #261546;
+
+    width: 350px;
+    position: fixed;
+    margin-top: 12rem;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.text_box {
+    position: absolute;
+    width: 435px;
+    height: 130px;
+    left: 133px;
+    top: 405px;
+    background: #2D2344;
+
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    text-align: left;
+    border-radius: 20px;
+    padding: 20px 25px;
+}
+
+.text_box > a{
+    color: #FAC746;
+}

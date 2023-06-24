@@ -1,0 +1,246 @@
+.grid-view {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  column-gap: 40px;
+  background-color: white;
+  padding: 15px;
+  width: 1225px;
+  color: #2d2344;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  /* border: 2px solid #f76707; */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.grid-info {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 5px;
+  /* border: 2px solid green; */
+}
+
+/* left side */
+.edit-user {
+  color: #5C0A95;
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.user-info-box {
+  width: 25rem;
+  min-height: 450px;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 5px 5px 10px #bdb8b8;
+  margin-bottom: 1.5rem;
+}
+
+.username-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+p {
+  color: #756D6D;
+}
+
+.tag {
+  background-color: #AF32AC;
+  max-height: 40px;
+  font-size: 18px;
+  color: white;
+  border-radius: 10px;
+  padding: 4px 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+
+.plus-tag {
+  width: 34px;
+  height: 34px;
+  background-color: #5C0A95;
+  color: white;
+  float: left;
+  border-radius: 10px;
+  padding: 0px 4px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.user-title {
+  clear:both;
+  padding-top: 12px;
+  text-align: left;
+}
+
+.aboutme-text {
+  text-align: left;
+}
+
+/* social media handles */
+.social-media-box {
+  width: 25rem;
+  min-height: 200px;
+  max-height: 230px;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 5px 5px 10px #bdb8b8;
+  text-align: left;
+}
+
+/* start of the right side */
+.summary-column {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  /* border: 2px solid pink; */
+  
+  width: 44.8rem;
+  height: 175px;
+  border-radius: 10px;
+  padding: 30px 35px;
+  box-shadow: 5px 5px 10px #bdb8b8;
+  margin-bottom: 1.5rem;
+}
+
+/* summary info */
+.summary-box-posts {
+  width: 19rem;
+  height: 115px;
+  border-radius: 10px;
+  padding: 0px 20px 10px 0px;
+  margin-bottom: 1.5rem;
+  background-color: #DD4085;
+}
+
+.summary-box-comments {
+  width: 20.1rem;
+  height: 115px;
+  border-radius: 10px;
+  padding: 0px 20px 10px 0px;
+  margin-bottom: 1.5rem;
+  background-color: #AF32AC;
+  float: right;
+}
+
+.summary-title {
+  color: white;
+  font-size: 42px;
+  float: right;
+}
+
+.summary-post-text {
+  clear:both;
+  color: #EA7DAD;
+  opacity: 0.55;
+  font-size: 30px;
+  float: right;
+  margin-top: -5px;
+}
+
+.newpaper-icon {
+  color: #EA7DAD;
+  opacity: 0.55;
+  padding: 9px 20px;
+}
+
+.summary-comment-text {
+  clear:both;
+  color: #D360D1;
+  opacity:0.55;
+  font-size: 30px;
+  float: right;
+  margin-top: -5px;
+}
+
+.comment-icon {
+  color: #D360D1;
+  opacity: 0.55;
+  padding: 9px 20px;
+}
+
+/* post row */
+.gray-title {
+  background-color: #ECECEC;
+  border-radius: 10px;
+  height: 34px;
+  font-size: 18px;
+  color:#2d2344;
+  padding: 4px 15px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+  float: left;
+}
+
+.dividing-line {
+  clear: both;
+  background-color: #FAC746;
+  height: 4px;
+  width: 39rem;
+}
+
+.user-post {
+  width: 39rem;
+  border-radius: 10px;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  box-shadow: 5px 5px 10px #bdb8b8;
+  cursor: pointer;
+}
+
+.profile-post-column {
+  display: grid;
+  grid-template-columns: auto auto;
+  /* gap: 10px;
+  column-gap: 40px; */
+}
+
+.user-comment-box {
+  width: 39rem;
+  border-radius: 10px;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  box-shadow: 5px 5px 10px #bdb8b8;
+}
+
+.userpost-title {
+  color: #DD4085;
+  font-size: 19px !important;
+  font-weight: 600;
+  padding-left: 15px;
+  padding-top: 8px;
+}
+
+.user-subtitle {
+  padding-left: 15px;
+  padding-bottom: 8px;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+
+.user-comment {
+  padding-left: 15px;
+  color: #2d2344;
+}
+
+.user-comment-delete {
+  color: #DD3C3C;
+  margin: auto 0 auto auto;
+  cursor: pointer;
+  padding-right: 30px;
+  padding-left: 15px;
+}
+
+.edit-profile {
+  margin-top: 15px;
+  margin-bottom: 6rem;
+  font-family: 'Montserrat', sans-serif;
+}

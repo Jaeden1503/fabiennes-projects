@@ -1,0 +1,29 @@
+.footer {
+    height: 3rem;
+    background-color: #261546;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: white;
+}
+
+a:hover{
+    /* text-decoration:none; */
+    color: #DD4085;
+}
+
+.copyright a {
+    color: #DD4085;
+    margin-left: 3px;
+    padding-right: 3px;
+}
+
+.copyright p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

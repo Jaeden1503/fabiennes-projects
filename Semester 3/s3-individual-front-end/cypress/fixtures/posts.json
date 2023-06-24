@@ -1,0 +1,79 @@
+{
+    "searchPosts": [
+        {
+            "id": 3,
+            "title": "cypress post 5",
+            "description": "second description",
+            "searchingBand": true,
+            "date": "2023-03-23",
+            "instrument": "piano",
+            "province": "Gelderland",
+            "user": {
+                "id": 1,
+                "username": "fabienne",
+                "email": "fabienne@gmail.com",
+                "about": "this is my new profile description!"
+            }
+        },
+        {
+            "id": 6,
+            "title": "cypress post 4",
+            "description": "Hi, i'm specialised in metal and hard rock, so i am looking for a band that also likes these genres. Hit me up if you're interested!",
+            "searchingBand": false,
+            "date": "2023-05-30",
+            "instrument": "guitar",
+            "province": "Noord-brabant",
+            "user": {
+                "id": 1,
+                "username": "fabienne",
+                "email": "fabienne@gmail.com",
+                "about": "this is my new profile description!"
+            }
+        },
+        {
+            "id": 7,
+            "title": "cypress post 3",
+            "description": "In grave need of a pianist",
+            "searchingBand": false,
+            "date": "2023-03-23",
+            "instrument": "piano",
+            "province": "Gelderland",
+            "user": {
+                "id": 3,
+                "username": "peterpeters",
+                "email": "peter@gmail.com",
+                "about": "admin wrote this super cool description"
+            }
+        },
+        {
+            "id": 8,
+            "title": "cypress post 2",
+            "description": "asfdlkf dfsd dfd dd fasdfd fd daf ",
+            "searchingBand": false,
+            "date": "2023-06-09",
+            "instrument": "flute",
+            "province": "Zuid-Holland",
+            "user": {
+                "id": 1,
+                "username": "fabienne",
+                "email": "fabienne@gmail.com",
+                "about": "this is my new profile description!"
+            }
+        },
+        {
+            "id": 9,
+            "title": "cypress post 1",
+            "description": "dsfd fdfdfd fds d",
+            "searchingBand": false,
+            "date": "2023-06-09",
+            "instrument": "piano",
+            "province": "Zeeland",
+            "user": {
+                "id": 1,
+                "username": "fabienne",
+                "email": "fabienne@gmail.com",
+                "about": "this is my new profile description!"
+            }
+        }
+    ]
+}

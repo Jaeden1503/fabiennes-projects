@@ -1,0 +1,27 @@
+.create-center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 45rem;
+    color:#2d2344;
+    margin-top: 2rem;
+    background-color: white;
+    box-shadow: 5px 5px 10px #bdb8b8;
+    border-radius: 10px;
+    padding: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.create-grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    column-gap: 40px;
+}
+
+.create-center>h2 {
+    margin-bottom: 20px;
+}
+
+.create-center>button {
+    margin-top: 20px;
+}
