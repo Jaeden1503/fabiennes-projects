@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+@model DashboardViewModel
+
+<link href="~/css/IndexDashboard.css" rel="stylesheet" id="bootstrap-css">
+<link href="~/css/site.css" rel="stylesheet" id="bootstrap-css">
+
+@*<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>*@
+@*<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>*@
+@*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />*@
+
+<div class="container" style="margin: 22px">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card-counter light-coral">
+                <i class="fa fa-book"></i>
+                <span class="count-numbers">@Model.RecipeAmount</span>
+                <span class="count-name">Recepten</span>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card-counter dark-green">
+                <i class="fas fa-carrot"></i>
+                <span class="count-numbers">@Model.IngredientAmount</span>
+                <span class="count-name">Ingrediënten</span>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card-counter purple">
+                <i class="fa fa-users"></i>
+                <span class="count-numbers">@Model.UserAmount</span>
+                <span class="count-name">Gebruikers</span>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card-counter dark-blue">
+                <i class="fas fa-star-half-alt"></i>
+                <span class="count-numbers">@Model.ReviewAmount</span>
+                <span class="count-name">Reviews</span>
+            </div>
+        </div>
+    </div>
+    <hr style="border: 3px solid #fce181; margin-top: 25px">
+
+    <div class="dashboard-greysection">
+        <h2 class="coralbold">Dit is de admin pagina:</h2>
+        <h4>Hier kunnen verschillende dingen gedaan worden, zoals:</h4>
+
+        <div>
+            <p class="greenbold" style="margin: 13px; font-size: 18px">Over recepten</p>
+            <ul style="margin-left: 30px;">
+                <li>Alle recepten inzien</li>
+                <li>Details bekijken</li>
+                <li>Editen</li>
+                <li>Verwijderen</li>
+                <li>Aanmaken</li>
+                <li>Reviews van specifieke recept zien</li>
+                <li>Reviews verwijderen</li>
+            </ul>
+        </div>
+        <div>
+            <p class="greenbold" style="margin: 13px; font-size: 18px">Over ingrediënten</p>
+            <ul style="margin-left: 30px;">
+                <li>Alle ingrediënten inzien</li>
+                <li>Editen</li>
+                <li>Verwijderen</li>
+                <li>Aanmaken</li>
+            </ul>
+        </div>
+        <div>
+            <p class="greenbold" style="margin: 13px; font-size: 18px">Over gebruikers</p>
+            <ul style="margin-left: 30px;">
+                <li>Alle gebruikers inzien (ex. admins)</li>
+                <li>Account status aanpassen</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+    </script>
+}

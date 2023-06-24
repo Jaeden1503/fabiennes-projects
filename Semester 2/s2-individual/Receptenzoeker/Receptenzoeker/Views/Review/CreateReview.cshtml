@@ -1,0 +1,40 @@
+﻿@model Receptenzoeker.Models.ReviewViewModel
+
+@{
+    ViewData["Title"] = "CreateReview";
+}
+
+<div class="container">
+        <h1 class="greenbold" style="text-align: center">Schrijf een review!</h1>
+        <hr />
+        <div class="row">
+            <div class="col-md-4" style="margin: auto">
+                <form asp-controller="Review">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <input hidden asp-for="RecipeViewModel.ID" class="control-label" />
+                        <label asp-for="RecipeViewModel.Name" class="control-label"></label>
+                        <input asp-for="RecipeViewModel.Name" class="form-control" readonly />
+                        <span asp-validation-for="RecipeViewModel.Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Title" class="control-label"></label>
+                        <input asp-for="Title" class="form-control" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label"></label>
+                        <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input asp-action="CreateReview" asp-route-id="@Model.RecipeViewModel.ID" type="submit" value="Posten" class="btn btn-default purplebutton" />
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
