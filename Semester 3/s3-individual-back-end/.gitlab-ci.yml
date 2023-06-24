@@ -1,0 +1,36 @@
+# Disable the Gradle daemon for Continuous Integration servers as correctness
+# is usually a priority over speed in CI environments. Using a fresh
+# runtime for each build is more reliable since the runtime is completely
+# isolated from any previous builds.
+variables:
+  GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+
+stages:
+  - build
+  - test
+  - sonarqube
+  - deployment
+
+build:
+  stage: build
+  script:
+    - ./gradlew assemble
+
+test:
+  stage: test
+  script:
+    - ./gradlew test
+
+sonarqube:
+  stage: sonarqube
+  script:
+    - ./gradlew sonarqube
+
+deployment:
+  stage: deployment
+  script:
+    - ./gradlew clean assemble
+    - docker build -t s3-garageband-back-end .
+    - docker stop find_garageband-backend-staging
+    - docker rm find_garageband-backend-staging
+    - docker run -d -p 8090:8080 --net=docker_semester3_network_staging --env spring_profiles_active=staging --name=find_garageband-backend-staging s3-garageband-back-end
