@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">SafeHome</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <string name="address1">Stratumseind 15</string>
+    <string name="address2">Fazantlaan 32</string>
+    <string name="address3">Schrijversbuurt 2</string>
+    <string name="address4">Tasveld 12</string>
+    <string name="address5">Norenberg 23</string>
+    <string name="address6">Rapportstraat 75</string>
+    <string name="address7">Landlust 36</string>
+    <string name="address8">Diamantbuurt 15</string>
+    <string name="address9">Newtonstraat 24</string>
+    <string name="address10">Duinbeek 69</string>
+
+    <string name="location1">Eindhoven</string>
+    <string name="location2">Amsterdam</string>
+    <string name="location3">Veldhoven</string>
+
+
+    <string name="name">Sam</string>
+    <string name="name2">Emily</string>
+    <string name="name3">Max</string>
+    <string name="name4">Jack</string>
+
+    <string name="description">I really enjoyed staying in a SafeHome building.</string>
+    <string name="description2">They really have nice neighborhoods.</string>
+    <string name="description3">I was able to find a place in no time!</string>
+    <string name="description4">Very cool app.</string>
+
+</resources>
