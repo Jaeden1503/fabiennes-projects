@@ -22,7 +22,6 @@ public class LicensePlateUseCaseImpl implements LicensePlateUseCase {
     private final CheckLicenseSpelling checkLicenseSpelling;
     private final SensorAvailabilityImpl sensorAvailability;
     private final TwilioSmsSender twilioSmsSender;
-//    private final SmsRequest smsRequest;
 
     @Transactional
     @Override
@@ -53,7 +52,7 @@ public class LicensePlateUseCaseImpl implements LicensePlateUseCase {
             emailCreationUseCase.createEmail(newAppointment.get().getEmployee().getEmailAddress(), guestName + " has to go to another parking");
             System.out.println("no free spot");
 
-            SmsRequest smsRequest = new SmsRequest("+31684121634", "The parking is full. Go to https://goo.gl/maps/oYG1MVvtrrfcEpXn8");
+            SmsRequest smsRequest = new SmsRequest("", "The parking is full. Go to https://goo.gl/maps/oYG1MVvtrrfcEpXn8");
             twilioSmsSender.sendSms(smsRequest);
         }
 

@@ -11,7 +11,7 @@ import java.util.Properties;
 public class SendEmailUseCaseImpl {
     public void createEmail(String toEmail, String body) {
         final String fromEmail = "peterpeters.norep@outlook.com"; //requires valid id
-        final String password = "PeterPeters1"; // correct password for id
+        final String password = ""; // correct password for id
 
         Properties props = new Properties();
         props.put("mail.smtp.user", fromEmail);
@@ -35,8 +35,7 @@ public class SendEmailUseCaseImpl {
             msg.setText(body);
             msg.setSubject("A guest has been spotted"); //the subject of the mail
             msg.setFrom(new InternetAddress(fromEmail));
-            msg.addRecipient(Message.RecipientType.TO, new InternetAddress("fabienneslb@hotmail.com")); //TODO: change receiver to actual employee/secretary
-            //msg.addRecipient(Message.RecipientType.CC, new InternetAddress("fabienneleidekker@gmail.com")); //CC email address, could be employee/secretary
+            msg.addRecipient(Message.RecipientType.TO, new InternetAddress("")); //TODO: change receiver to actual employee/secretary
 
             Transport.send(msg);
 
